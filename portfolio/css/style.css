@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFFAEC;
+}
+
+nav{
+    background-color: #3D3D3D;
+    padding: 2rem;
+    font-size: 20px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap : 1.5rem; /*Espace entre les éléments d'une liste*/
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    padding : 8px;
+    border-radius: 10px;
+}
+
+nav a:hover{
+    background-color: #578E7E;
+}
+
+.roboto-mono-uniquifier {
+    font-family: "Roboto Mono", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+#acceuil{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8rem;
+    flex-wrap: wrap; /* Si un élément n'arrive pas à rentrer sur la même ligne, il ira à la ligne suivante (cas où flex-direction: row) */
+    background-color: #F5ECD5;
+}
+
+.photoProfil{
+    max-width: 23rem;
+    max-height: 23rem;
+    padding: 2rem;
+    border-radius: 50%; /* permet à l'image d'être sous forme de cercle */
+    border: solid 2rem;
+    background-color: #578E7E;
+    border-color: #FFFAEC;
+    margin: 3rem;
+}
+
+.lien{
+    color:#3D3D3D;
+    font-weight: 700;
+}
+
+.lien:hover{
+    font-size: 1.2rem;
+    color:#578E7E;
+    text-decoration: underline;
+    text-decoration-thickness: 0.3rem;
+    text-underline-offset: 8px; /* permet de régler la hauteur du soulignement */
+}
+
+#apropos{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+

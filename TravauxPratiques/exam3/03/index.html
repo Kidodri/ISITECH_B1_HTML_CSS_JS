@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion d'Employés</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        margin: 20px auto;
+        gap: 20px;
+      }
+
+      .form-container {
+        display: flex;
+        justify-content: space-between;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .input-group input {
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+
+      #btnAjouter {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        align-self: flex-end;
+      }
+
+      #btnAjouter:hover {
+        background-color: #45a049;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <div class="input-group">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" />
+        </div>
+        <div class="input-group">
+          <label for="poste">Poste</label>
+          <input type="text" id="poste" />
+        </div>
+        <div class="input-group">
+          <label for="salaire">Salaire</label>
+          <input type="number" id="salaire" />
+        </div>
+        <div class="input-group"> <!-- Ajout de l'input pour la date-->
+          <label for="date">Date</label>
+          <input type="date" id="date" /> <!-- Modif type,id et for-->
+        </div>
+        <button id="btnAjouter">Ajouter</button>
+      </div>
+
+      <table id="tableEmployes">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Poste</th>
+            <th>Salaire</th>
+            <th>Date</th> <!-- Ajout du table head pour la date-->
+          </tr>
+        </thead>
+        <tbody id="corpsTable">
+          <tr>
+            <td>Jean Dupont</td>
+            <td>Développeur</td>
+            <td>45000</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      // Récupération des références aux éléments
+      var inputNom = document.getElementById("nom");
+      var inputPoste = document.getElementById("poste");
+      var inputSalaire = document.getElementById("salaire");
+      var inputDate = document.getElementById("date"); // Création et affectation variable inputDate
+      var btnAjouter = document.getElementById("btnAjouter");
+      var corpsTable = document.getElementById("corpsTable");
+
+      // Fonction pour ajouter un employé
+      function ajouterEmploye() {
+        // Création d'une nouvelle ligne
+        var nouvelleLigne = document.createElement("tr");
+        debugger;
+        // Création des cellules
+        var celluleNom = document.createElement("td");
+        var cellulePoste = document.createElement("td");
+        var celluleSalaire = document.createElement("td");
+        var celluleDate = document.createElement("td"); // Creation var celluleDate
+        // Ajout du contenu dans les cellules
+        celluleNom.textContent = inputNom.value;
+        cellulePoste.textContent = inputPoste.value;
+        celluleSalaire.textContent = inputSalaire.value;
+        celluleDate.textContent = inputDate.value; // Modification celluleDate.textContent
+
+        // Ajout des cellules à la ligne
+        nouvelleLigne.appendChild(celluleNom);
+        nouvelleLigne.appendChild(cellulePoste);
+        nouvelleLigne.appendChild(celluleSalaire);
+        nouvelleLigne.appendChild(celluleDate); // Ajout celluleDate
+
+        // Ajout de la ligne au tableau
+        corpsTable.appendChild(nouvelleLigne);
+
+
+        // Réinitialisation des champs
+        inputNom.value = "";
+        inputPoste.value = "";
+        inputSalaire.value = "";
+        inputDate.value = ""; // Réinitialisation inputDate
+      }
+
+      // Ajout de l'écouteur d'événement sur le bouton
+      btnAjouter.onclick = ajouterEmploye;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table>
+            <caption>
+              Front-end web developer course 2021
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Person</th>
+                <th scope="col">Most interest in</th>
+                <th scope="col">Age</th>
+              </tr>
+            </thead>
+            <tbody id="tableau">
+              
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="2">Average age</th>
+                <td id="moyenne"></td>
+              </tr>
+            </tfoot>
+          </table>
+    </div>
+
+    <div>
+        <input id="name">
+        <input id="interest">
+        <input id="age" type="number">
+        <input onclick="getTableau() , moyenne()" type="button" value="Ajouter une ligne">
+        <input onclick="supprimerLigne()" type="button" value="Supprimer une ligne">
+        <input onclick="supprimerToutesLignes()" type="button" value="Supprimer toutes les lignes">
+    </div>
+</body>
+</html>

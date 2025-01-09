@@ -1,0 +1,47 @@
+/* Ce code cible la balise body */
+body{
+    background-color: black;
+}
+
+/* Ce code cible la balise p */
+p{
+    color: aliceblue;
+}
+
+/* Ce code est un exemple de classe CSS */
+.rounded_light_bg{
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
+
+/* Ce code est un exemple d'id CSS */
+#deuxièmeBonjour{
+    background-color: #dd6868;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
+
+/* Ce code est un exemple d'un selecteur CSS */
+/* S'applique à tout les p contenus dans dans un élément 
+dont l'id est troisiemeBonjour */
+#troisiemeBonjour p{
+    background-color: #000000;
+    border-radius: 60px;
+    padding: 10px;
+    margin: 10px;
+    color: rgb(137, 215, 128);
+    font-size: 80px;
+}
+
+.jersey-15-regular {
+    font-family: "Jersey 15", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+  }
+  
