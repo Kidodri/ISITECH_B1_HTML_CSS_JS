@@ -18,9 +18,6 @@ nav ul{
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-nav ul {
     display: flex;
     justify-content: center;
     gap : 1.5rem; /*Espace entre les éléments d'une liste*/
@@ -35,6 +32,38 @@ nav a{
 
 nav a:hover{
     background-color: #578E7E;
+}
+
+@media screen and (max-width: 700px) { /* Ce qui est à l'interieur ne s'execute que quand la largeur de la page est inferieur ou égale à 700px  */
+    nav{
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        top: -250px; /* Cache la navbar */
+    }
+
+    .active{ /* Montre la navbar */
+        top: 0;
+    }
+
+    #boutonBurger{
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        height: 5rem;
+        width: 3rem;
+    }
+
+    #boutonBurger span{
+        background-color: #3D3D3D;
+        height: 0.2rem;
+        width: 2rem;
+    }
+
+
 }
 
 .roboto-mono-uniquifier {

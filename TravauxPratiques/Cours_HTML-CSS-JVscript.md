@@ -594,5 +594,10 @@ Mac
 --> IA, deeplearning
 
 
-1 langage, 1 framework, 1 distrib linux(Debian très bien), 1 projet
+Pour progresser, se concentrer sur: 1 langage, 1 framework, 1 distrib linux(Debian très bien), 1 projet
 
+Cette année :
+Langages: html, css, js, Rust (après avoir compris le JS plus en profondeur. Semble très documenté et possède une grande communauté/ Peut permettre d'améliorer le JavaScript)
+Framework : Tailwind (Après avoir le css plus en profondeur)
+Distrib linux: Debian
+Projet: Portfolio, (Projets du book Rust ?)
