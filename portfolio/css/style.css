@@ -12,6 +12,7 @@ nav{
     background-color: #3D3D3D;
     padding: 2rem;
     font-size: 20px;
+    transition: top 0.5s ease;
 }
 
 nav ul{
@@ -38,12 +39,11 @@ nav a:hover{
     nav{
         position: fixed;
         width: 100%;
-        z-index: 1;
         top: -250px; /* Cache la navbar */
     }
 
-    .active{ /* Montre la navbar */
-        top: 0;
+    nav ul{
+        flex-direction: column;
     }
 
     #boutonBurger{
@@ -53,14 +53,32 @@ nav a:hover{
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-        height: 5rem;
-        width: 3rem;
+        height: 1.6rem;
+        width: 2rem;
     }
 
     #boutonBurger span{
-        background-color: #3D3D3D;
         height: 0.2rem;
         width: 2rem;
+        transition: 0.75s;
+    }
+
+    .openButton span{
+        background-color: #3D3D3D;
+        transform: rotate(1turn); 
+        z-index: 0;
+    }
+
+    .closeButton span{
+        background-color: #FFFAEC;
+        transform: rotate(0.5turn); /*Rotationne le bouton en fonction de la position de départ du bouton.
+        La valeur doit être différente de celle dans .openButton pour qu'il y ait un changement
+        (Ici il y a 0.5 tours d'écart entre les deux états ouvert et fermé)*/
+        z-index: 1;
+    }
+
+    .active{ /* Montre la navbar */
+        top: 0;
     }
 
 
@@ -108,7 +126,6 @@ nav a:hover{
 #apropos{
     display: flex;
     flex-direction: column;
-    
 }
 
 
